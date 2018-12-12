@@ -33,13 +33,12 @@ const Accueil = {
   },
   template: `
     <div class="component">
-      <h1>Expressions Irregulières</h1>
+      <h1 class="titre">Expressions Irregulières</h1>
       <ul class="menu">
-        <router-link 
-          v-for="(expression,index) in expressions"
-          :key="index"
-          :to="expression.nom" 
-          tag="li">{{ expression.titre }}</router-link>
+        <li v-for="(expression,index) in expressions"
+          :key="index">
+          <router-link :to="expression.nom">{{ expression.titre }}</router-link>
+        </li>
       </ul>
     </div>`
     }
