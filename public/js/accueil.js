@@ -6,7 +6,12 @@ const expressions = [
   {
     nom: 'averti',
     titre: 'Un homme averti en vaut deux'
-  }]
+  },
+  {
+    nom: 'porte',
+    titre: 'Voir midi à sa porte'
+  },
+]
 
 function precedent (nom) {
   let result

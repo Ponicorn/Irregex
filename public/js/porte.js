@@ -2,8 +2,8 @@ const Porte = {
   components: {Suivant, Precedent},
   data () { return  { 
     ouvert: false,
-    suivant: suivant('perche'),
-    precedent: precedent('perche'),
+    suivant: suivant('porte'),
+    precedent: precedent('porte'),
   }},
   template: `
   <div class="component">
@@ -14,6 +14,7 @@ const Porte = {
         <img :class="{ ouvert }" src="public/img/porte.png" alt="Une perche" />
       </div>
       <div id="midi">
+        <img :class="{ ouvert }" src="public/img/midi.png" alt="Une perche" />
       </div>
     </div>
     <div class="btnwrap">

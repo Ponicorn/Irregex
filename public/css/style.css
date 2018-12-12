@@ -170,9 +170,18 @@ img {
   display: relative;
 }
 #porte {
-  height: 100%;
-  display: absolute;
-  transition: 1s;
+  height: 50vh;
+  width: 80vw;
+  position: absolute;
+  z-index: 10;
+  margin: auto;
+  text-align: center;
+}
+#midi {
+  height: 50vh;
+  width: 80vw;
+  position: absolute;
+  text-align: center;
 }
 #porte img {
   transition: 1s;
