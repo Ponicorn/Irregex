@@ -156,3 +156,30 @@ img {
 .averti #homme1 { right: 0; z-index: 10; }
 #homme2 { left: calc(50% - 20vw); }
 .averti #homme2 { left: 0; }
+
+
+/* Midi a sa porte */
+
+#midiporte {
+  height: 50vh;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: relative;
+}
+#porte {
+  height: 100%;
+  display: absolute;
+  transition: 1s;
+}
+#porte img {
+  transition: 1s;
+  transform-origin: left;
+}
+#porte.ouvert img {
+  height: 50vh;
+  transform: perspective(1000px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+  /* transform-origin: left; */
+}

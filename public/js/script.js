@@ -3,6 +3,7 @@ const router = new VueRouter({
     { path: '/', component: Accueil },
     { path: '/perche', name: 'perche', component: Perche },
     { path: '/averti', name: 'averti', component: Averti },
+    { path: '/porte', name: 'porte', component: Porte },
   ]
 })
 
