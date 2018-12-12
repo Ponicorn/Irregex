@@ -141,7 +141,9 @@ img {
   transition: 1s;
   height: 50vh;
   width: 40vw;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
 }
 #homme1 img, 
