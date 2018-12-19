@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Perche from './views/Perche.vue'
 import HommeAverti from './views/HommeAverti.vue'
+import MidiPorte from './views/MidiPorte.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/avertir',
       name: 'avertir',
       component: HommeAverti
+    },
+    {
+      path: '/midi',
+      name: 'midi',
+      component: MidiPorte
     }
   ]
 })

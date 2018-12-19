@@ -1,13 +1,13 @@
 <template>
-  <div class="HommeAverti">
+  <div class="hommeAverti">
     <h1>Un homme averti en vaut deux</h1>
     <div class="content-wrap">
       <div class="content" :class="{ averti }">
         <div id="homme1">
-          <img src="../assets/homme.png" alt="">
+          <img src="../assets/homme.png" alt="Un homme">
         </div>
         <div id="homme2">
-          <img src="../assets/homme.png" alt="">
+          <img src="../assets/homme.png" alt="Un homme">
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.HommeAverti {
+.hommeAverti {
   text-align: center;
 
   .content {
