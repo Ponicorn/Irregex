@@ -23,6 +23,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
   .content {
     display: flex;
     justify-content: center;

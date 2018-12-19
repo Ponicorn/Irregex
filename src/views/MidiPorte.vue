@@ -1,27 +1,29 @@
 <template>
   <div class="midiPorte">
     <h1>Voir midi à sa porte</h1>
-    <div class="content-wrap">
-      <div class="content">
-        <div id="porte" :class="{ ouvert }">
-          <img src="../assets/porte.png" alt="Une porte">
-        </div>
-        <div id="midi">
-          <img src="../assets/midi.png" alt="L'heure">
-        </div>
+    <Expression>
+      <div id="porte" :class="{ ouvert }">
+        <img src="../assets/porte.png" alt="Une porte">
       </div>
-    </div>
-    <div class="actions">
+      <div id="midi">
+        <img src="../assets/midi.png" alt="L'heure">
+      </div>
+    </Expression>
+    <Actions>
       <button @click="ouvert = !ouvert" class="btn">
         {{ ouvert ? 'Désouvrir' : 'Ouvrir' }}
       </button>
-    </div>
+    </Actions>
   </div>
 </template>
 
 <script>
+import Expression from '@/components/Expression.vue'
+import Actions from '@/components/Actions.vue'
+
 export default {
   name: 'MidiPorte',
+  components: { Expression, Actions },
   data () {
     return {
       ouvert: false

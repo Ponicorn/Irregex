@@ -1,27 +1,29 @@
 <template>
   <div class="hommeAverti">
     <h1>Un homme averti en vaut deux</h1>
-    <div class="content-wrap">
-      <div class="content" :class="{ averti }">
-        <div id="homme1">
-          <img src="../assets/homme.png" alt="Un homme">
-        </div>
-        <div id="homme2">
-          <img src="../assets/homme.png" alt="Un homme">
-        </div>
+    <Expression>
+      <div id="homme1" :class="{ averti }">
+        <img src="../assets/homme.png" alt="Un homme">
       </div>
-    </div>
-    <div class="actions">
+      <div id="homme2" :class="{ averti }">
+        <img src="../assets/homme.png" alt="Un homme">
+      </div>
+    </Expression>
+    <Actions>
       <button @click="averti = !averti" class="btn">
         {{ averti ? 'Désavertir' : 'Avertir' }}
       </button>
-    </div>
+    </Actions>
   </div>
 </template>
 
 <script>
+import Expression from '@/components/Expression.vue'
+import Actions from '@/components/Actions.vue'
+
 export default {
   name: 'HommeAverti',
+  components: { Expression, Actions },
   data () {
     return {
       averti: false
@@ -30,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .hommeAverti {
   text-align: center;
 
@@ -43,16 +45,13 @@ export default {
         transition: 1s;
       }
     }
+    #homme1.averti img{
+      transform:translate(calc(-50% - 5px));
+      z-index: 20;
+    }
 
-    &.averti {
-      #homme1 img{
-        transform:translate(calc(-50% - 5px));
-        z-index: 20;
-      }
-
-      #homme2 img{
-        transform:translate(calc(50% + 5px));
-      }
+    #homme2.averti img{
+      transform:translate(calc(50% + 5px));
     }
   }
 }

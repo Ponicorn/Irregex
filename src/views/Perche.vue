@@ -1,24 +1,26 @@
 <template>
   <div class="perche">
     <h1>Tendre une perche</h1>
-    <div class="content-wrap">
-      <div class="content">
-        <div id="perche" :class="{ tendu }">
-          <img src="../assets/perche.png" alt="Une perche">
-        </div>
+    <Expression>
+      <div id="perche" :class="{ tendu }">
+        <img src="../assets/perche.png" alt="Une perche">
       </div>
-    </div>
-    <div class="actions">
+    </Expression>
+    <Actions>
       <button @click="tendu = !tendu" class="btn">
         {{ tendu ? 'Détendre' : 'Tendre' }}
       </button>
-    </div>
+    </Actions>
   </div>
 </template>
 
 <script>
+import Expression from '@/components/Expression.vue'
+import Actions from '@/components/Actions.vue'
+
 export default {
   name: 'Perche',
+  components: { Expression, Actions },
   data () {
     return {
       tendu: false
