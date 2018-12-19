@@ -50,4 +50,7 @@ html, body {
       -ms-user-select: none;
           user-select: none;
 }
+.btn::-moz-focus-inner {
+  border: 0;
+}
 </style>
