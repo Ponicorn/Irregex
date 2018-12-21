@@ -9,7 +9,7 @@
         <img src="../assets/homme.png" alt="Un homme">
       </div>
     </Expression>
-    <Actions>
+    <Actions :precedent="precedent" :suivant="suivant">
       <button @click="averti = !averti" class="btn">
         {{ averti ? 'Désavertir' : 'Avertir' }}
       </button>
@@ -23,6 +23,7 @@ import Actions from '@/components/Actions.vue'
 
 export default {
   name: 'HommeAverti',
+  props: [ 'precedent', 'suivant' ],
   components: { Expression, Actions },
   data () {
     return {

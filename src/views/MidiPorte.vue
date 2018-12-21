@@ -9,7 +9,7 @@
         <img src="../assets/midi.png" alt="L'heure">
       </div>
     </Expression>
-    <Actions>
+    <Actions :precedent="precedent" :suivant="suivant">
       <button @click="ouvert = !ouvert" class="btn">
         {{ ouvert ? 'Désouvrir' : 'Ouvrir' }}
       </button>
@@ -23,6 +23,7 @@ import Actions from '@/components/Actions.vue'
 
 export default {
   name: 'MidiPorte',
+  props: [ 'precedent', 'suivant' ],
   components: { Expression, Actions },
   data () {
     return {

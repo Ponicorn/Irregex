@@ -41,7 +41,7 @@ html, body {
   background: #eeeeee;
   padding: 5px 10px;
   font-family: inherit;
-  font-size: 2em;
+  font-size: 1.5em;
   outline: none;
   cursor: pointer;
   -webkit-touch-callout: none;

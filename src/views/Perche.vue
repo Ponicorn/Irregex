@@ -6,7 +6,7 @@
         <img src="../assets/perche.png" alt="Une perche">
       </div>
     </Expression>
-    <Actions>
+    <Actions :precedent="precedent" :suivant="suivant">
       <button @click="tendu = !tendu" class="btn">
         {{ tendu ? 'Détendre' : 'Tendre' }}
       </button>
@@ -20,6 +20,7 @@ import Actions from '@/components/Actions.vue'
 
 export default {
   name: 'Perche',
+  props: [ 'precedent', 'suivant' ],
   components: { Expression, Actions },
   data () {
     return {

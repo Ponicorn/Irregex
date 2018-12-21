@@ -18,17 +18,20 @@ export default new Router({
     {
       path: '/perche',
       name: 'perche',
-      component: Perche
+      component: Perche,
+      props: { precedent: false, suivant: 'avertir' }
     },
     {
       path: '/avertir',
       name: 'avertir',
-      component: HommeAverti
+      component: HommeAverti,
+      props: { precedent: 'perche', suivant: 'midi' }
     },
     {
       path: '/midi',
       name: 'midi',
-      component: MidiPorte
+      component: MidiPorte,
+      props: { precedent: 'avertir', suivant: false }
     }
   ]
 })
