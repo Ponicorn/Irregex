@@ -1,0 +1,26 @@
+.hommeAverti {
+  text-align: center;
+
+  .content {
+    position: relative;
+
+    #homme1,
+    #homme2 {
+      width: 50%;
+      position: absolute;
+
+      img {
+        transition: 1s;
+      }
+    }
+
+    #homme1.averti img {
+      transform: translate(calc(-50% - 5px));
+      z-index: 20;
+    }
+
+    #homme2.averti img {
+      transform: translate(calc(50% + 5px));
+    }
+  }
+}

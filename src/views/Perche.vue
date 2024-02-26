@@ -14,34 +14,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import Expression from '@/components/Expression.vue'
 import Actions from '@/components/Actions.vue'
 
-export default {
-  name: 'Perche',
-  props: [ 'precedent', 'suivant' ],
-  components: { Expression, Actions },
-  data () {
-    return {
-      tendu: false
-    }
-  }
-}
+defineProps([ 'precedent', 'suivant' ])
+const tendu = ref(false)
 </script>
-
-<style lang="scss" scoped>
-.perche {
-  text-align: center;
-  #perche {
-    img  {
-      transition: 1s;
-    }
-    &.tendu img {
-      // On a une largeur max de 75% de l'écran
-      // avec un scale a 1.3 on est toujours dedans garanti
-      transform: scale(1.3,0.7);
-    }
-  }
-}
-</style>
