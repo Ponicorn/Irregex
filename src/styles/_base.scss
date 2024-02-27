@@ -43,3 +43,26 @@ html, body {
 .btn::-moz-focus-inner {
   border: 0;
 }
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .nav {
+      width: 50px;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    .btn {
+      border: none;
+      text-align: center;
+    }
+  }
+  .slot {
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
