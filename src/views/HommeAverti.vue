@@ -17,43 +17,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import Expression from '@/components/Expression.vue'
 import Actions from '@/components/Actions.vue'
 
-export default {
-  name: 'HommeAverti',
-  props: [ 'precedent', 'suivant' ],
-  components: { Expression, Actions },
-  data () {
-    return {
-      averti: false
-    }
-  }
-}
+defineProps([ 'precedent', 'suivant' ])
+const averti = ref(false)
 </script>
-
-<style lang="scss">
-.hommeAverti {
-  text-align: center;
-
-  .content {
-    position: relative;
-    #homme1, #homme2 {
-      width: 50%;
-      position: absolute;
-      img {
-        transition: 1s;
-      }
-    }
-    #homme1.averti img{
-      transform:translate(calc(-50% - 5px));
-      z-index: 20;
-    }
-
-    #homme2.averti img{
-      transform:translate(calc(50% + 5px));
-    }
-  }
-}
-</style>

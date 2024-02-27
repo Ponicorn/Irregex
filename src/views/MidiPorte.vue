@@ -17,42 +17,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import Expression from '@/components/Expression.vue'
 import Actions from '@/components/Actions.vue'
 
-export default {
-  name: 'MidiPorte',
-  props: [ 'precedent', 'suivant' ],
-  components: { Expression, Actions },
-  data () {
-    return {
-      ouvert: false
-    }
-  }
-}
+defineProps([ 'precedent', 'suivant' ])
+const ouvert = ref(false)
 </script>
-
-<style lang="scss" scoped>
-.midiPorte {
-  text-align: center;
-  .content {
-    position: relative;
-    #porte, #midi {
-      position: absolute;
-    }
-
-    #porte{
-      z-index: 10;
-      img {
-        transform-origin: left;
-        transition: 1s;
-      }
-    }
-
-    #porte.ouvert img{
-      transform: perspective(1000px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
-    }
-  }
-}
-</style>

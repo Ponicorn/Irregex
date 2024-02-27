@@ -1,0 +1,25 @@
+.midiPorte {
+    text-align: center;
+
+    .content {
+        position: relative;
+
+        #porte,
+        #midi {
+            position: absolute;
+        }
+
+        #porte {
+            z-index: 10;
+
+            img {
+                transform-origin: left;
+                transition: 1s;
+            }
+        }
+
+        #porte.ouvert img {
+            transform: perspective(1000px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+        }
+    }
+}
